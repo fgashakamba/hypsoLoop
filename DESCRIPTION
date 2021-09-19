@@ -1,20 +1,27 @@
 Package: hypsoLoop
 Type: Package
-Title: Drawing hypsographic curves and calculate hypsometric integrals of the sub-catchments of a watershed.
+Title: Drawing hypsographic curves and calculate hypsometric integrals of the sub-catchments of a watershed
 Version: 0.1.0
 Author: Faustin GASHAKAMBA
 Maintainer: Faustin GASHAKAMBA <gashakamba@gmail.com>
 Description: Functions for generating tables required for drawing and calculating hypsometric curves and hypsometric integrals.
     These functions accept as input the DEM of the region of interest (your watershed) and a spatial data frame file specifying delineation of sub-catchments within the watershed.
-    They then generate output in the form of PNG images and HTML files contained in a folder named "OUTPUT" created in the current directory.
-Depends: R (>= 4.0.5)
+    They then generate output in the form of PNG images and HTML files contained in a folder named "HYPSO_OUTPUT" created in the current directory.
+Depends: R (>= 4.1.0)
+Suggests: 
+    knitr,
+    rmarkdown,
+    testthat (>= 3.0.0)
+VignetteBuilder: knitr
 Imports:
     PolynomF,
     dplyr,
     ggplot2,
     raster,
+    sf,
     sjPlot
-License: Apache 2.0
+License: GPL-3
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.1.2
+Config/testthat/edition: 3
